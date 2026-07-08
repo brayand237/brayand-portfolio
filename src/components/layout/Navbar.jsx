@@ -5,12 +5,10 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 
 function Navbar() {
-
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -18,59 +16,68 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-
   }, []);
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white shadow-lg border-b"
-            : "bg-white/80 backdrop-blur-lg"
+            ? "bg-white/70 backdrop-blur-xl border-b border-gray-200 shadow-sm"
+            : "bg-white/30 backdrop-blur-xl"
         }`}
       >
-        <div className="max-w-7xl mx-auto h-20 px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto h-16 px-8 flex items-center justify-between">
 
-          <a href="#hero">
+          {/* Logo */}
+          <a
+            href="#hero"
+            className="leading-tight select-none"
+          >
+            <h1 className="text-2xl font-extrabold tracking-wide">
+              <span className="text-gray-900">
+                Brayand
+              </span>
 
-            <h1 className="text-2xl font-bold text-blue-600">
-              Brayand
+              <span className="text-blue-600 ml-2">
+                Portfolio
+              </span>
             </h1>
 
-            <p className="text-xs uppercase tracking-wider text-gray-500">
-              Network & Systems Administrator junior
+            <p className="text-[10px] uppercase tracking-[0.35em] text-gray-500 mt-1">
+              Systems & Network
             </p>
-
           </a>
 
+          {/* Navigation Desktop */}
           <DesktopMenu />
 
+          {/* Bouton Contact */}
           <a
             href="#contact"
-            className="hidden lg:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition"
+            className="hidden lg:flex items-center border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-5 py-2.5 rounded-xl font-semibold transition duration-300"
           >
             Me contacter
           </a>
 
+          {/* Menu Mobile */}
           <button
-            className="lg:hidden"
+            className="lg:hidden text-gray-800"
             onClick={() => setOpen(true)}
           >
-            <Menu size={32} />
+            <Menu size={30} />
           </button>
 
         </div>
-
       </header>
 
-      <div className="h-20"></div>
+      {/* Compensation de la navbar fixe */}
+      <div className="h-16"></div>
 
       <MobileMenu
         open={open}
         setOpen={setOpen}
       />
-
     </>
   );
 }

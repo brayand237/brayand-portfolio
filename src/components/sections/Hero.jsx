@@ -12,13 +12,14 @@ function Hero() {
       {/* Partie gauche */}
       <div className="max-w-2xl">
 
-        <span className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-semibold">
-          Salut, bienvenue sur mon portfolio
+        <span className="inline-block bg-blue-100 text-blue-500 px-4 py-2 rounded-full font-semibold">
+        Fogang Kape
+        Gilles Brayand
         </span>
 
         <h1 className="mt-6 text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
 
-          Je suis
+          Administrateur Systèmes & Réseaux Junior
 
           <span className="block text-blue-600 mt-2">
             {profile.firstName}
@@ -48,7 +49,10 @@ function Hero() {
         {/* Boutons */}
         <div className="flex items-center gap-5 mt-10">
 
-  <Button href={profile.cv}>
+        <Button
+    href={profile.cv}
+    download
+>
     Télécharger mon CV
   </Button>
 

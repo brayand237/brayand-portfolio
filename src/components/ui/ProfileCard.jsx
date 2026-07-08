@@ -12,7 +12,7 @@ import {
 
 function ProfileCard() {
   return (
-    <div className="w-[360px] bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="w-[650px] bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
       {/* Bandeau supérieur */}
       <div className="h-24 bg-gradient-to-r from-blue-700 to-blue-500"></div>

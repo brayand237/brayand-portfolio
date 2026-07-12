@@ -3,12 +3,15 @@ import { Menu } from "lucide-react";
 
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+import ThemeToggle from "../ui/ThemeToggle";
 
 function Navbar() {
+
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -16,25 +19,27 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
+
   }, []);
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-white/70 backdrop-blur-xl border-b border-gray-200 shadow-sm"
-            : "bg-white/30 backdrop-blur-xl"
+            ? "bg-white/90 backdrop-blur-xl shadow-lg border-b border-gray-200"
+            : "bg-white/60 backdrop-blur-xl"
         }`}
       >
-        <div className="max-w-7xl mx-auto h-16 px-8 flex items-center justify-between">
+
+        <div className="max-w-7xl mx-auto h-20 px-8 flex items-center justify-between">
 
           {/* Logo */}
-          <a
-            href="#hero"
-            className="leading-tight select-none"
-          >
+
+          <a href="#hero">
+
             <h1 className="text-2xl font-extrabold tracking-wide">
+
               <span className="text-gray-900">
                 Brayand
               </span>
@@ -42,42 +47,54 @@ function Navbar() {
               <span className="text-blue-600 ml-2">
                 Portfolio
               </span>
+
             </h1>
 
-            <p className="text-[10px] uppercase tracking-[0.35em] text-gray-500 mt-1">
-              Systems & Network
+            <p className="text-xs uppercase tracking-[0.25em] text-gray-500">
+              Network & Systems
             </p>
+
           </a>
 
-          {/* Navigation Desktop */}
+          {/* Menu Desktop */}
+
           <DesktopMenu />
 
-          {/* Bouton Contact */}
-          <a
-            href="#contact"
-            className="hidden lg:flex items-center border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-5 py-2.5 rounded-xl font-semibold transition duration-300"
-          >
-            Me contacter
-          </a>
+          {/* Actions */}
+
+          <div className="hidden lg:flex items-center gap-4">
+
+            <ThemeToggle />
+
+            <a
+              href="#contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition"
+            >
+              Me contacter
+            </a>
+
+          </div>
 
           {/* Menu Mobile */}
+
           <button
-            className="lg:hidden text-gray-800"
+            className="lg:hidden"
             onClick={() => setOpen(true)}
           >
-            <Menu size={30} />
+            <Menu size={32} />
           </button>
 
         </div>
+
       </header>
 
-      {/* Compensation de la navbar fixe */}
-      <div className="h-16"></div>
+      <div className="h-20"></div>
 
       <MobileMenu
         open={open}
         setOpen={setOpen}
       />
+
     </>
   );
 }

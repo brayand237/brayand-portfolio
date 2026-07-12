@@ -50,7 +50,7 @@ function Hero() {
         <div className="flex items-center gap-5 mt-10">
 
         <Button
-    href={profile.cv}
+    href="/documents/cv.pdf"
     download
 >
     Télécharger mon CV

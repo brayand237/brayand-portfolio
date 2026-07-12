@@ -89,7 +89,7 @@ function ProfileCard() {
       <div className="px-8 pb-8 flex gap-3">
 
         <Button
-          href={profile.cv}
+          href="/document/cv.pdf"
           download
         >
           <Download size={18} />

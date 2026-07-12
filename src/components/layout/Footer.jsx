@@ -1,27 +1,42 @@
+import {
+  Mail,
+  Phone,
+  MapPin,
+  ArrowUp,
+} from "lucide-react";
+
 function Footer() {
   return (
-    <footer className="mt-32 border-t border-gray-200 bg-white">
+    <footer className="mt-32 bg-gradient-to-b from-white to-slate-100 border-t border-gray-200">
 
       <div className="max-w-7xl mx-auto px-8 py-16">
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-14">
 
-          {/* Logo */}
+          {/* Présentation */}
 
           <div>
 
-            <h2 className="text-2xl font-bold text-blue-600">
-              Brayand Kapé
+            <h2 className="text-3xl font-extrabold tracking-wide">
+              <span className="text-gray-900">
+                Brayand
+              </span>
+
+              <span className="text-blue-600 ml-2">
+                Portfolio
+              </span>
             </h2>
 
-            <p className="text-sm uppercase tracking-wider text-gray-500 mt-1">
-              Network & Systems Administrator junior
+            <p className="uppercase tracking-[0.30em] text-xs text-gray-500 mt-2">
+              Systems & Network
             </p>
 
-            <p className="mt-6 text-gray-600 leading-7">
-              Portfolio professionnel présentant mon parcours,
-              mes projets, mes compétences et mes réalisations
-              dans le domaine des systèmes, réseaux et du support informatique.
+            <p className="mt-6 text-gray-600 leading-8">
+              Administrateur Systèmes & Réseaux Junior passionné par
+              l'administration des infrastructures, le support informatique
+              et les technologies réseau. Je recherche une opportunité
+              afin de mettre mes compétences au service d'une équipe
+              dynamique tout en poursuivant mon évolution professionnelle.
             </p>
 
           </div>
@@ -30,23 +45,53 @@ function Footer() {
 
           <div>
 
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-xl font-bold text-gray-900">
               Navigation
             </h3>
 
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-6 space-y-4">
 
-              <li><a href="#hero" className="hover:text-blue-600 transition">Accueil</a></li>
+              <li>
+                <a href="#hero" className="hover:text-blue-600 transition">
+                  Accueil
+                </a>
+              </li>
 
-              <li><a href="#about" className="hover:text-blue-600 transition">À propos</a></li>
+              <li>
+                <a href="#about" className="hover:text-blue-600 transition">
+                  À propos
+                </a>
+              </li>
 
-              <li><a href="#skills" className="hover:text-blue-600 transition">Compétences</a></li>
+              <li>
+                <a href="#skills" className="hover:text-blue-600 transition">
+                  Compétences
+                </a>
+              </li>
 
-              <li><a href="#projects" className="hover:text-blue-600 transition">Projets</a></li>
+              <li>
+                <a href="#timeline" className="hover:text-blue-600 transition">
+                  Parcours
+                </a>
+              </li>
 
-              <li><a href="#credentials" className="hover:text-blue-600 transition">Diplômes</a></li>
+              <li>
+                <a href="#credentials" className="hover:text-blue-600 transition">
+                  Diplômes
+                </a>
+              </li>
 
-              <li><a href="#contact" className="hover:text-blue-600 transition">Contact</a></li>
+              <li>
+                <a href="#projects" className="hover:text-blue-600 transition">
+                  Projets
+                </a>
+              </li>
+
+              <li>
+                <a href="#contact" className="hover:text-blue-600 transition">
+                  Contact
+                </a>
+              </li>
 
             </ul>
 
@@ -56,32 +101,73 @@ function Footer() {
 
           <div>
 
-            <h3 className="text-lg font-semibold text-gray-900">
+            <h3 className="text-xl font-bold text-gray-900">
               Restons en contact
             </h3>
 
-            <div className="mt-6 space-y-4">
+            <div className="mt-6 space-y-5">
 
-              <p className="text-gray-600">
-                📧 contactkabray@gmail.com
-              </p>
+              <div className="flex items-center gap-3">
 
-              <p className="text-gray-600">
-                📞 +237 696 29 32 69
-              </p>
+                <Mail
+                  className="text-blue-600"
+                  size={20}
+                />
 
-              <p className="text-gray-600">
-                📍 Yaoundé, Cameroun
-              </p>
+                <a
+                  href="mailto:contactkabray@gmail.com"
+                  className="hover:text-blue-600 transition"
+                >
+                  contactkabray@gmail.com
+                </a>
 
-              <a
-                href="https://www.linkedin.com/in/brayand-kape-09100a3a6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-blue-600 font-semibold hover:underline"
-              >
-                Mon LinkedIn
-              </a>
+              </div>
+
+              <div className="flex items-center gap-3">
+
+                <Phone
+                  className="text-blue-600"
+                  size={20}
+                />
+
+                <a
+                  href="tel:+237696293269"
+                  className="hover:text-blue-600 transition"
+                >
+                  +237 696 29 32 69
+                </a>
+
+              </div>
+
+              <div className="flex items-center gap-3">
+
+                <MapPin
+                  className="text-blue-600"
+                  size={20}
+                />
+
+                <span>
+                  Yaoundé, Cameroun
+                </span>
+
+              </div>
+
+              <div className="flex items-center gap-3">
+
+                <span className="text-xl">
+                  💼
+                </span>
+
+                <a
+                  href="https://www.linkedin.com/in/brayand-kape-09100a3a6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-600 transition"
+                >
+                  LinkedIn
+                </a>
+
+              </div>
 
             </div>
 
@@ -89,19 +175,19 @@ function Footer() {
 
         </div>
 
-        <div className="border-t border-gray-200 mt-14 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-gray-300 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-5">
 
-          <p className="text-gray-500 text-sm">
-
-            © {new Date().getFullYear()} Brayand. Tous droits réservés.
-
+          <p className="text-sm text-gray-500 text-center md:text-left">
+            © {new Date().getFullYear()} Brayand Portfolio.
+            Tous droits réservés.
           </p>
 
           <a
             href="#hero"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl transition"
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl transition"
           >
-            ↑ Retour en haut
+            <ArrowUp size={18} />
+            Retour en haut
           </a>
 
         </div>

@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
@@ -5,13 +7,15 @@ import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
 import Skills from "./components/sections/Skills";
 import Timeline from "./components/sections/Timeline";
+import Credentials from "./components/sections/Credentials";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
-import Credentials from "./components/sections/Credentials";
-function App() {
+
+import ProjectDetails from "./pages/ProjectDetails";
+
+function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <About />
       <Skills />
@@ -19,8 +23,22 @@ function App() {
       <Credentials />
       <Projects />
       <Contact />
-      <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:slug" element={<ProjectDetails />} />
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
   );
 }
 

@@ -24,7 +24,7 @@ const projects = [
       "VPN"
     ],
 
-    documentation: "/documents/intek-stage.pdf",
+    documentation: "/documents/cahier de charge_conception&implémentation_réseau.pdf",
 
     sections: [
 

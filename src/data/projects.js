@@ -8,7 +8,7 @@ const projects = [
 
     category: "Projet académique",
 
-    image: "/images/projects/intek/intek-networking.jpg",
+    image: "/images/projects/intek/intek-network.jpg",
 
     description:
       "Conception et implémentation d'une infrastructure réseau d'entreprise intégrant la segmentation VLAN, le routage inter-VLAN, les ACL, le DHCP, le DNS, la QoS et un VPN sécurisé.",
@@ -431,6 +431,7 @@ const projects = [
           "Déploiement du service DHCP.",
 
         galleries: []
+        
 
       },
 

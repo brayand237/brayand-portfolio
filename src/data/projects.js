@@ -425,15 +425,45 @@ const projects = [
       },
 
       {
-        title: "DHCP",
+        title: "ROUTAGE",
 
         content:
-          "Déploiement du service DHCP.",
+          "Routage statique.",
 
-        galleries: []
-        
+          galleries: [
 
-      },
+            {
+              title: "configuration du routage statique ",
+  
+              items: [
+  
+                {
+                  type: "image",
+  
+                  title: "routage statique",
+  
+                  description:
+                    "synthaxe de configuration du routage statique sur un routeur cisco.",
+  
+                  image: "/images/projects/intek/routage/conf-route2.png"
+                },
+                {
+                  type: "image",
+  
+                  title: "verification des routes",
+  
+                  description:
+                    "interpreter une table de routage.",
+  
+                  image: "/images/projects/intek/routage/verification-route.png"
+                }
+  
+              ]
+            }
+  
+          ]
+  
+        },
 
       {
         title: "DNS",
@@ -450,26 +480,6 @@ const projects = [
 
         content:
           "Mise en œuvre de la qualité de service.",
-
-        galleries: []
-
-      },
-
-      {
-        title: "VPN",
-
-        content:
-          "Connexion sécurisée entre les différents sites.",
-
-        galleries: []
-
-      },
-
-      {
-        title: "Tests finaux",
-
-        content:
-          "Validation complète du fonctionnement de l'infrastructure.",
 
         galleries: []
 

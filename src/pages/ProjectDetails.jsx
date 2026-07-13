@@ -3,9 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import {
   ArrowLeft,
   Download,
-  Layers3,
-  FolderOpen,
-  Image as ImageIcon,
 } from "lucide-react";
 
 import projects from "../data/projects";
@@ -108,13 +105,9 @@ function ProjectDetails() {
 
         <div className="mt-14">
 
-          <h2 className="text-2xl font-bold flex items-center gap-3">
-
-            <Layers3 />
-
+        <h2 className="text-2xl font-bold">
             Technologies utilisées
-
-          </h2>
+        </h2>
 
           <div className="flex flex-wrap gap-3 mt-6">
 
@@ -176,11 +169,9 @@ function ProjectDetails() {
                 className="bg-white rounded-3xl border border-gray-200 shadow-lg p-10"
               >
 
-                <h2 className="text-3xl font-bold">
-
-                  {sectionIndex + 1}. {section.title}
-
-                </h2>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                       {section.title}
+                  </h2>
 
                 <p className="text-gray-600 leading-8 mt-5">
 
@@ -201,13 +192,9 @@ function ProjectDetails() {
 
                         <div>
 
-                          <h3 className="text-2xl font-semibold flex items-center gap-3">
-
-                            <FolderOpen size={24} />
-
-                            {sectionIndex + 1}.{galleryIndex + 1} {gallery.title}
-
-                          </h3>
+                        <h3 className="text-2xl font-semibold text-blue-600">
+                          {gallery.title}
+                        </h3>
 
                           <p className="text-gray-500 mt-2">
 

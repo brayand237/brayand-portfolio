@@ -1,13 +1,13 @@
+import { Link } from "react-router-dom";
 import {
   Mail,
   Phone,
   MapPin,
-  ArrowUp,
 } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="mt-32 bg-gradient-to-b from-white to-slate-100 border-t border-gray-200">
+    <footer className="mt-32 border-t border-gray-200 bg-white">
 
       <div className="max-w-7xl mx-auto px-8 py-16">
 
@@ -17,7 +17,8 @@ function Footer() {
 
           <div>
 
-            <h2 className="text-3xl font-extrabold tracking-wide">
+            <h2 className="text-3xl font-bold tracking-wide">
+
               <span className="text-gray-900">
                 Brayand
               </span>
@@ -25,9 +26,10 @@ function Footer() {
               <span className="text-blue-600 ml-2">
                 Portfolio
               </span>
+
             </h2>
 
-            <p className="uppercase tracking-[0.30em] text-xs text-gray-500 mt-2">
+            <p className="uppercase tracking-[0.25em] text-xs text-gray-500 mt-2">
               Systems & Network
             </p>
 
@@ -35,8 +37,8 @@ function Footer() {
               Administrateur Systèmes & Réseaux Junior passionné par
               l'administration des infrastructures, le support informatique
               et les technologies réseau. Je recherche une opportunité
-              afin de mettre mes compétences au service d'une équipe
-              dynamique tout en poursuivant mon évolution professionnelle.
+              professionnelle afin de développer mes compétences et
+              contribuer à des projets concrets.
             </p>
 
           </div>
@@ -45,52 +47,52 @@ function Footer() {
 
           <div>
 
-            <h3 className="text-xl font-bold text-gray-900">
+            <h3 className="text-xl font-semibold text-gray-900">
               Navigation
             </h3>
 
             <ul className="mt-6 space-y-4">
 
               <li>
-                <a href="#hero" className="hover:text-blue-600 transition">
+                <Link to="/#hero" className="hover:text-blue-600 transition">
                   Accueil
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#about" className="hover:text-blue-600 transition">
+                <Link to="/#about" className="hover:text-blue-600 transition">
                   À propos
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#skills" className="hover:text-blue-600 transition">
+                <Link to="/#skills" className="hover:text-blue-600 transition">
                   Compétences
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#timeline" className="hover:text-blue-600 transition">
+                <Link to="/#timeline" className="hover:text-blue-600 transition">
                   Parcours
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#credentials" className="hover:text-blue-600 transition">
+                <Link to="/#credentials" className="hover:text-blue-600 transition">
                   Diplômes
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#projects" className="hover:text-blue-600 transition">
+                <Link to="/#projects" className="hover:text-blue-600 transition">
                   Projets
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="#contact" className="hover:text-blue-600 transition">
+                <Link to="/#contact" className="hover:text-blue-600 transition">
                   Contact
-                </a>
+                </Link>
               </li>
 
             </ul>
@@ -101,8 +103,8 @@ function Footer() {
 
           <div>
 
-            <h3 className="text-xl font-bold text-gray-900">
-              Restons en contact
+            <h3 className="text-xl font-semibold text-gray-900">
+              Contact
             </h3>
 
             <div className="mt-6 space-y-5">
@@ -110,8 +112,8 @@ function Footer() {
               <div className="flex items-center gap-3">
 
                 <Mail
+                  size={18}
                   className="text-blue-600"
-                  size={20}
                 />
 
                 <a
@@ -126,8 +128,8 @@ function Footer() {
               <div className="flex items-center gap-3">
 
                 <Phone
+                  size={18}
                   className="text-blue-600"
-                  size={20}
                 />
 
                 <a
@@ -142,8 +144,8 @@ function Footer() {
               <div className="flex items-center gap-3">
 
                 <MapPin
+                  size={18}
                   className="text-blue-600"
-                  size={20}
                 />
 
                 <span>
@@ -152,19 +154,15 @@ function Footer() {
 
               </div>
 
-              <div className="flex items-center gap-3">
-
-                <span className="text-xl">
-                  💼
-                </span>
+              <div>
 
                 <a
                   href="https://www.linkedin.com/in/brayand-kape-09100a3a6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-blue-600 transition"
+                  className="text-blue-600 hover:underline"
                 >
-                  LinkedIn
+                  Voir mon profil LinkedIn
                 </a>
 
               </div>
@@ -175,20 +173,18 @@ function Footer() {
 
         </div>
 
-        <div className="border-t border-gray-300 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-5">
+        <div className="border-t border-gray-200 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-5">
 
-          <p className="text-sm text-gray-500 text-center md:text-left">
-            © {new Date().getFullYear()} Brayand Portfolio.
-            Tous droits réservés.
+          <p className="text-sm text-gray-500">
+            © {new Date().getFullYear()} Brayand Portfolio. Tous droits réservés.
           </p>
 
-          <a
-            href="#hero"
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl transition"
+          <Link
+            to="/#hero"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl transition"
           >
-            <ArrowUp size={18} />
-            Retour en haut
-          </a>
+            Retour au portfolio
+          </Link>
 
         </div>
 

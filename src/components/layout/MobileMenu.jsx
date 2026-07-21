@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 import { navigation } from "../../constants/navigation";
 
 function MobileMenu({ open, setOpen }) {
+
   if (!open) return null;
 
   return (
@@ -24,15 +26,19 @@ function MobileMenu({ open, setOpen }) {
         <ul className="flex flex-col items-center gap-8">
 
           {navigation.map((item) => (
+
             <li key={item.id}>
-              <a
-                href={item.href}
+
+              <Link
+                to={item.href}
                 onClick={() => setOpen(false)}
                 className="text-xl font-semibold hover:text-blue-600"
               >
                 {item.name}
-              </a>
+              </Link>
+
             </li>
+
           ))}
 
         </ul>

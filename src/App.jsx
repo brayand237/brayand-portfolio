@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToHash from "./components/ScrollToHash";
 
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -30,15 +31,25 @@ function Home() {
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/project/:slug" element={<ProjectDetails />} />
-      </Routes>
+  <ScrollToHash />
 
-      <Footer />
-    </BrowserRouter>
+  <Navbar />
+
+  <Routes>
+
+    <Route path="/" element={<Home />} />
+
+    <Route
+      path="/project/:slug"
+      element={<ProjectDetails />}
+    />
+
+  </Routes>
+
+  <Footer />
+
+</BrowserRouter>
   );
 }
 

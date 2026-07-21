@@ -3,7 +3,7 @@ import { Menu } from "lucide-react";
 
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
-import ThemeToggle from "../ui/ThemeToggle";
+import { Link } from "react-router-dom";
 
 function Navbar() {
 
@@ -36,7 +36,7 @@ function Navbar() {
 
           {/* Logo */}
 
-          <a href="#hero">
+          <Link to="/#hero">
 
             <h1 className="text-2xl font-extrabold tracking-wide">
 
@@ -54,7 +54,7 @@ function Navbar() {
               Network & Systems
             </p>
 
-          </a>
+            </Link>
 
           {/* Menu Desktop */}
 
@@ -64,14 +64,14 @@ function Navbar() {
 
           <div className="hidden lg:flex items-center gap-4">
 
-            <ThemeToggle />
+            
 
-            <a
-              href="#contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition"
-            >
-              Me contacter
-            </a>
+          <Link
+            to="/#contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl transition"
+          >
+            Me contacter
+          </Link>
 
           </div>
 

@@ -445,7 +445,7 @@ const projects = [
                   description:
                     "synthaxe de configuration du routage statique sur un routeur cisco.",
   
-                  image: "/images/projects/intek/routage/conf-route2.png"
+                  image: "/images/projects/intek/routage/conf-routes.png"
                 },
                 {
                   type: "image",
@@ -455,7 +455,7 @@ const projects = [
                   description:
                     "interpreter une table de routage.",
   
-                  image: "/images/projects/intek/routage/verification-route.png"
+                  image: "/images/projects/intek/routage/verification-routes.png"
                 }
   
               ]
@@ -465,15 +465,6 @@ const projects = [
   
         },
 
-      {
-        title: "DNS",
-
-        content:
-          "Déploiement du service DNS.",
-
-        galleries: []
-
-      },
 
       {
         title: "QoS",
@@ -481,8 +472,38 @@ const projects = [
         content:
           "Mise en œuvre de la qualité de service.",
 
-        galleries: []
+          galleries: [
 
+            {
+              title: "configuration du Qos ",
+  
+              items: [
+  
+                {
+                  type: "image",
+  
+                  title: "quatity of service ( qos)",
+  
+                  description:
+                    "synthaxe de configuration de la Qos  sur un routeur cisco.",
+  
+                  image: "/images/projects/intek/qos/qos-config.png"
+                },
+                {
+                  type: "image",
+  
+                  title: "verification de la configuration",
+  
+                  description:
+                    "anuaire de configuration Qos",
+  
+                  image: "/images/projects/intek/qos/verification-qos.png"
+                }
+  
+              ]
+            }
+  
+          ]
       }
 
     ]
